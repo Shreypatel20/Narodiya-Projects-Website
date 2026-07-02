@@ -197,57 +197,66 @@
     </div>
 
     <!--
-      FORM NOTE:
-      This form currently opens the visitor's email app with the details
-      pre-filled (via mailto), so it works with zero backend setup.
-      When you're ready for submissions to land directly in your inbox
-      without opening an email app, swap this for a service like Formspree
-      or FormSubmit — I can wire that up when you're ready.
+      This form now submits directly to FormSubmit.co, which forwards every
+      submission straight to narodiyaprojects@gmail.com — no backend/server
+      needed. On first submission after going live, FormSubmit sends a
+      one-time confirmation email to that inbox; click the activation link
+      in it once, and all future submissions deliver automatically.
+ 
+      To have these auto-marked "Important" + starred in Gmail, create a
+      Gmail filter:
+        Settings → Filters and Blocked Addresses → Create a new filter
+        Subject contains: New Equipment Rental Lead
+        → Check "Always mark it as important" + "Star it"
     -->
     <form
-  class="quote-form"
-  id="quoteForm"
-  action="https://formsubmit.co/narodiyaprojects@gmail.com"
-  method="POST"
->
-  <!-- FormSubmit config fields (hidden) -->
-  <input type="hidden" name="_subject" value="🚧 New Equipment Rental Lead">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
-  <label>
-    Name
-    <input type="text" name="Name" required placeholder="Your name">
-  </label>
-  <label>
-    Phone
-    <input type="tel" name="Phone" required placeholder="Your phone number">
-  </label>
-  <label>
-    Equipment needed
-    <select name="Equipment needed" required>
-      <option value="" disabled selected>Select equipment</option>
-      <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
-      <option value="Mobile Crane">Mobile Crane</option>
-      <option value="Backhoe">Backhoe</option>
-      <option value="Not sure yet">Not sure yet</option>
-    </select>
-  </label>
-  <label>
-    Site location
-    <input type="text" name="Site location" required placeholder="Area / address in Ahmedabad">
-  </label>
-  <label>
-    Rental duration
-    <input type="text" name="Rental duration" placeholder="e.g. 3 days, 2 weeks">
-  </label>
-  <label class="full-width">
-    Project details
-    <textarea name="Project details" rows="4" placeholder="Anything else we should know"></textarea>
-  </label>
-  <button type="submit" class="btn btn-primary full-width">Send Request</button>
-</form>
+      class="quote-form"
+      id="quoteForm"
+      action="https://formsubmit.co/narodiyaprojects@gmail.com"
+      method="POST"
+    >
+      <!-- FormSubmit config (hidden, do not remove) -->
+      <input type="hidden" name="_subject" value="🚧 New Equipment Rental Lead">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Honeypot field to reduce spam bots; keep hidden via CSS, leave name as-is -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+ 
+      <label>
+        Name
+        <input type="text" name="Name" required placeholder="Your name">
+      </label>
+      <label>
+        Phone
+        <input type="tel" name="Phone" required placeholder="Your phone number">
+      </label>
+      <label>
+        Equipment needed
+        <select name="Equipment needed" required>
+          <option value="" disabled selected>Select equipment</option>
+          <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
+          <option value="Mobile Crane">Mobile Crane</option>
+          <option value="Backhoe">Backhoe</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </label>
+      <label>
+        Site location
+        <input type="text" name="Site location" required placeholder="Area / address in Ahmedabad">
+      </label>
+      <label>
+        Rental duration
+        <input type="text" name="Rental duration" placeholder="e.g. 3 days, 2 weeks">
+      </label>
+      <label class="full-width">
+        Project details
+        <textarea name="Project details" rows="4" placeholder="Anything else we should know"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary full-width">Send Request</button>
+    </form>
+  </div>
+</section>
+ 
 <div class="hazard-bar" aria-hidden="true"></div>
 
 <!-- ============ FOOTER / CONTACT ============ -->
