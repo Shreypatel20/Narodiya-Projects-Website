@@ -204,42 +204,50 @@
       without opening an email app, swap this for a service like Formspree
       or FormSubmit — I can wire that up when you're ready.
     -->
-    <form class="quote-form" id="quoteForm">
-      <label>
-        Name
-        <input type="text" name="name" required placeholder="Your name">
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" required placeholder="Your phone number">
-      </label>
-      <label>
-        Equipment needed
-        <select name="equipment" required>
-          <option value="" disabled selected>Select equipment</option>
-          <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
-          <option value="Mobile Crane">Mobile Crane</option>
-          <option value="Backhoe">Backhoe</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-      </label>
-      <label>
-        Site location
-        <input type="text" name="location" required placeholder="Area / address in Ahmedabad">
-      </label>
-      <label>
-        Rental duration
-        <input type="text" name="duration" placeholder="e.g. 3 days, 2 weeks">
-      </label>
-      <label class="full-width">
-        Project details
-        <textarea name="details" rows="4" placeholder="Anything else we should know"></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary full-width">Send Request</button>
-    </form>
-  </div>
-</section>
+    <form
+  class="quote-form"
+  id="quoteForm"
+  action="https://formsubmit.co/narodiyaprojects@gmail.com"
+  method="POST"
+>
+  <!-- FormSubmit config fields (hidden) -->
+  <input type="hidden" name="_subject" value="🚧 New Equipment Rental Lead">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
 
+  <label>
+    Name
+    <input type="text" name="Name" required placeholder="Your name">
+  </label>
+  <label>
+    Phone
+    <input type="tel" name="Phone" required placeholder="Your phone number">
+  </label>
+  <label>
+    Equipment needed
+    <select name="Equipment needed" required>
+      <option value="" disabled selected>Select equipment</option>
+      <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
+      <option value="Mobile Crane">Mobile Crane</option>
+      <option value="Backhoe">Backhoe</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+  </label>
+  <label>
+    Site location
+    <input type="text" name="Site location" required placeholder="Area / address in Ahmedabad">
+  </label>
+  <label>
+    Rental duration
+    <input type="text" name="Rental duration" placeholder="e.g. 3 days, 2 weeks">
+  </label>
+  <label class="full-width">
+    Project details
+    <textarea name="Project details" rows="4" placeholder="Anything else we should know"></textarea>
+  </label>
+  <button type="submit" class="btn btn-primary full-width">Send Request</button>
+</form>
 <div class="hazard-bar" aria-hidden="true"></div>
 
 <!-- ============ FOOTER / CONTACT ============ -->
