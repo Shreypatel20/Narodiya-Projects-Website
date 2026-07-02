@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narodiya Projects | Construction Equipment Rental, Ahmedabad</title>
+<meta name="description" content="Narodiya Projects rents JCBs, mobile cranes, and backhoes across Ahmedabad, Gujarat. Well-maintained machines, experienced operators, flexible rental terms.">
+
+<!-- Google Fonts: Oswald = bold headline face (industrial, condensed), Work Sans = body, IBM Plex Mono = specs/data -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="logo-transparent.png">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <img src="logo-light.png" alt="Narodiya Projects" class="logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#equipment">Equipment</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#quote">Get a Quote</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+919727797415" class="phone-pill">
+        <span class="dot"></span> +91 97277 97415
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="hazard-bar" aria-hidden="true"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <p class="eyebrow">Ahmedabad, Gujarat · Equipment Rental</p>
+    <h1>Machines on site.<br>No downtime.</h1>
+    <p class="hero-sub">
+      Narodiya Projects supplies JCBs, mobile cranes, and backhoes to contractors
+      and builders across Ahmedabad — with operators, on your schedule.
+    </p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn btn-primary">Request a Quote</a>
+      <a href="#equipment" class="btn btn-outline">View Equipment</a>
+    </div>
+  </div>
+  <div class="hero-plate" aria-hidden="true">
+    <span>EST. AHMEDABAD</span>
+    <span>FLEET STATUS: ACTIVE</span>
+  </div>
+</section>
+
+<div class="hazard-bar" aria-hidden="true"></div>
+
+<!-- ============ EQUIPMENT ============ -->
+<section class="equipment" id="equipment">
+  <div class="container">
+    <p class="eyebrow">The Fleet</p>
+    <h2>Equipment ready to deploy</h2>
+    <p class="section-sub">
+      Every machine below is available for daily, weekly, or monthly hire.
+      More equipment is added to the fleet regularly — call us if you don't see what you need.
+    </p>
+
+    <!--
+      EQUIPMENT CARDS
+      To add a new machine later: copy one <article class="plate-card">...</article>
+      block and change the text inside. Each card is independent, so nothing
+      else on the page needs to change.
+    -->
+    <div class="equipment-grid" id="equipmentGrid">
+
+      <article class="plate-card">
+        <div class="plate-header">
+          <span class="plate-code">UNIT / 01</span>
+          <span class="plate-status">AVAILABLE</span>
+        </div>
+        <h3>JCB Backhoe Loader</h3>
+        <p class="plate-desc">Excavation, loading, trenching, and site clearing. Our most requested machine.</p>
+        <ul class="plate-specs">
+          <li><span>Dig depth</span><strong>Update spec</strong></li>
+          <li><span>Bucket capacity</span><strong>Update spec</strong></li>
+          <li><span>Operator</span><strong>Included</strong></li>
+        </ul>
+        <a href="#quote" class="plate-link">Request this machine →</a>
+      </article>
+
+      <article class="plate-card">
+        <div class="plate-header">
+          <span class="plate-code">UNIT / 02</span>
+          <span class="plate-status">AVAILABLE</span>
+        </div>
+        <h3>Mobile Crane</h3>
+        <p class="plate-desc">Lifting and material placement for building, structural, and industrial jobs.</p>
+        <ul class="plate-specs">
+          <li><span>Lift capacity</span><strong>Update spec</strong></li>
+          <li><span>Boom reach</span><strong>Update spec</strong></li>
+          <li><span>Operator</span><strong>Included</strong></li>
+        </ul>
+        <a href="#quote" class="plate-link">Request this machine →</a>
+      </article>
+
+      <article class="plate-card">
+        <div class="plate-header">
+          <span class="plate-code">UNIT / 03</span>
+          <span class="plate-status">AVAILABLE</span>
+        </div>
+        <h3>Backhoe</h3>
+        <p class="plate-desc">Digging, grading, and utility work for small to mid-size sites.</p>
+        <ul class="plate-specs">
+          <li><span>Dig depth</span><strong>Update spec</strong></li>
+          <li><span>Bucket capacity</span><strong>Update spec</strong></li>
+          <li><span>Operator</span><strong>Included</strong></li>
+        </ul>
+        <a href="#quote" class="plate-link">Request this machine →</a>
+      </article>
+
+      <!-- "Add machine" placeholder card — remove this once your fleet list is final -->
+      <article class="plate-card plate-card--add">
+        <h3>More machines coming</h3>
+        <p class="plate-desc">Looking for a specific machine? Call us — we're expanding the fleet.</p>
+        <a href="tel:+919727797415" class="plate-link">Call +91 97277 97415 →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why-us" id="why-us">
+  <div class="hazard-bar" aria-hidden="true"></div>
+  <div class="container why-inner">
+    <div class="why-copy">
+      <p class="eyebrow eyebrow--light">Why Narodiya Projects</p>
+      <h2>Built for contractors who can't afford delays</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <h3>Local & responsive</h3>
+        <p>Based in Ahmedabad, so machines reach your site fast — no waiting on equipment coming from out of state.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <h3>Operators included</h3>
+        <p>Every rental comes with an experienced operator, so your crew can focus on the job, not the machine.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <h3>Flexible terms</h3>
+        <p>Hire by the day, week, or month. Scale up or down as your project timeline changes.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">04</span>
+        <h3>Well-maintained fleet</h3>
+        <p>Machines are inspected and serviced regularly, so breakdowns don't become your problem on-site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section class="quote" id="quote">
+  <div class="container quote-inner">
+    <div class="quote-copy">
+      <p class="eyebrow">Get Started</p>
+      <h2>Request a quote</h2>
+      <p class="section-sub">
+        Tell us what you need and where. We'll get back to you with availability and pricing —
+        usually within a few hours.
+      </p>
+      <div class="quote-contact">
+        <a href="tel:+919727797415">+91 97277 97415</a>
+        <a href="mailto:narodiyaprojects@gmail.com">narodiyaprojects@gmail.com</a>
+      </div>
+    </div>
+
+    <!--
+      FORM NOTE:
+      This form currently opens the visitor's email app with the details
+      pre-filled (via mailto), so it works with zero backend setup.
+      When you're ready for submissions to land directly in your inbox
+      without opening an email app, swap this for a service like Formspree
+      or FormSubmit — I can wire that up when you're ready.
+    -->
+    <form class="quote-form" id="quoteForm">
+      <label>
+        Name
+        <input type="text" name="name" required placeholder="Your name">
+      </label>
+      <label>
+        Phone
+        <input type="tel" name="phone" required placeholder="Your phone number">
+      </label>
+      <label>
+        Equipment needed
+        <select name="equipment" required>
+          <option value="" disabled selected>Select equipment</option>
+          <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
+          <option value="Mobile Crane">Mobile Crane</option>
+          <option value="Backhoe">Backhoe</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </label>
+      <label>
+        Site location
+        <input type="text" name="location" required placeholder="Area / address in Ahmedabad">
+      </label>
+      <label>
+        Rental duration
+        <input type="text" name="duration" placeholder="e.g. 3 days, 2 weeks">
+      </label>
+      <label class="full-width">
+        Project details
+        <textarea name="details" rows="4" placeholder="Anything else we should know"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary full-width">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<div class="hazard-bar" aria-hidden="true"></div>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo-light.png" alt="Narodiya Projects" class="footer-logo-img">
+      <div>
+        <p>Construction equipment rental · Ahmedabad, Gujarat</p>
+      </div>
+    </div>
+    <div class="footer-details">
+      <a href="tel:+919727797415">+91 97277 97415</a>
+      <a href="mailto:narodiyaprojects@gmail.com">narodiyaprojects@gmail.com</a>
+      <span>Ahmedabad, Gujarat, India</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Narodiya Projects. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
