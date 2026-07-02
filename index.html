@@ -197,67 +197,81 @@
     </div>
 
     <!--
-      This form now submits directly to FormSubmit.co, which forwards every
-      submission straight to narodiyaprojects@gmail.com — no backend/server
-      needed. On first submission after going live, FormSubmit sends a
-      one-time confirmation email to that inbox; click the activation link
-      in it once, and all future submissions deliver automatically.
- 
-      To have these auto-marked "Important" + starred in Gmail, create a
-      Gmail filter:
-        Settings → Filters and Blocked Addresses → Create a new filter
-        Subject contains: New Equipment Rental Lead
-        → Check "Always mark it as important" + "Star it"
-    -->
-    <form
-      class="quote-form"
-      id="quoteForm"
-      action="https://formsubmit.co/narodiyaprojects@gmail.com"
-      method="POST"
+  This form submits directly to FormSubmit.co, which forwards every
+  submission straight to narodiyaprojects@gmail.com — no backend/server
+  needed. On first submission after going live, FormSubmit sends a
+  one-time confirmation email to that inbox; click the activation link
+  in it once, and all future submissions deliver automatically.
+
+  To auto-mark these "Important" + starred in Gmail, create a filter:
+    Settings → Filters and Blocked Addresses → Create a new filter
+    Subject contains: New Equipment Rental Lead
+    → Check "Always mark it as important" + "Star it"
+
+  TO CHANGE THE DESTINATION EMAIL: edit the `action` URL below, then
+  redeploy, submit once, and click the confirmation link FormSubmit sends.
+-->
+<form
+  class="quote-form"
+  id="quoteForm"
+  action="https://formsubmit.co/narodiyaprojects@gmail.com"
+  method="POST"
+>
+  <!-- FormSubmit config (hidden, do not remove) -->
+  <input type="hidden" name="_subject" value="🚧 New Equipment Rental Lead">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Redirect after successful submission -->
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+  <!-- Honeypot field to reduce spam bots; keep hidden via CSS, leave name as-is -->
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+  <label>
+    Name
+    <input type="text" name="Name" required placeholder="Your name" autocomplete="name">
+  </label>
+
+  <label>
+    Phone
+    <input
+      type="tel"
+      name="Phone"
+      required
+      placeholder="Your phone number"
+      autocomplete="tel"
+      pattern="[0-9+\-\s()]{7,15}"
+      title="Enter a valid phone number"
     >
-      <!-- FormSubmit config (hidden, do not remove) -->
-      <input type="hidden" name="_subject" value="🚧 New Equipment Rental Lead">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Honeypot field to reduce spam bots; keep hidden via CSS, leave name as-is -->
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
- 
-      <label>
-        Name
-        <input type="text" name="Name" required placeholder="Your name">
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="Phone" required placeholder="Your phone number">
-      </label>
-      <label>
-        Equipment needed
-        <select name="Equipment needed" required>
-          <option value="" disabled selected>Select equipment</option>
-          <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
-          <option value="Mobile Crane">Mobile Crane</option>
-          <option value="Backhoe">Backhoe</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-      </label>
-      <label>
-        Site location
-        <input type="text" name="Site location" required placeholder="Area / address in Ahmedabad">
-      </label>
-      <label>
-        Rental duration
-        <input type="text" name="Rental duration" placeholder="e.g. 3 days, 2 weeks">
-      </label>
-      <label class="full-width">
-        Project details
-        <textarea name="Project details" rows="4" placeholder="Anything else we should know"></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary full-width">Send Request</button>
-    </form>
-  </div>
-</section>
- 
-<div class="hazard-bar" aria-hidden="true"></div>
+  </label>
+
+  <label>
+    Equipment needed
+    <select name="Equipment_needed" required>
+      <option value="" disabled selected>Select equipment</option>
+      <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
+      <option value="Mobile Crane">Mobile Crane</option>
+      <option value="Backhoe">Backhoe</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+  </label>
+
+  <label>
+    Site location
+    <input type="text" name="Site_location" required placeholder="Area / address in Ahmedabad">
+  </label>
+
+  <label>
+    Rental duration
+    <input type="text" name="Rental_duration" placeholder="e.g. 3 days, 2 weeks">
+  </label>
+
+  <label class="full-width">
+    Project details
+    <textarea name="Project_details" rows="4" placeholder="Anything else we should know"></textarea>
+  </label>
+
+  <button type="submit" class="btn btn-primary full-width">Send Request</button>
+</form>
 
 <!-- ============ FOOTER / CONTACT ============ -->
 <footer class="site-footer" id="contact">
