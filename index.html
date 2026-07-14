@@ -186,60 +186,60 @@
       </div>
     </div>
 
-    <!--
-      FORM NOTE:
-      This form now submits directly to Formspree (https://formspree.io/f/xkodnlzp),
-      so entries land in your inbox without opening the visitor's email app.
-      No JavaScript is required for this to work — it's a plain HTML POST.
-    -->
-    <form
-      class="quote-form"
-      id="quoteForm"
-      action="https://formspree.io/f/xkodnlzp"
-      method="POST"
-    >
-      <!-- Sets the subject line of the email Formspree sends you -->
-      <input type="hidden" name="_subject" value="New equipment quote request — Narodiya Projects">
- 
-      <!-- Redirects the visitor to a thank-you page after submitting.
-           Create thank-you.html (see note below) or point this at any page you like. -->
-      <input type="hidden" name="_next" value="thank-you.html">
- 
-      <!-- Honeypot field to cut down on spam bots. Keep this hidden via CSS (see style.css note below). -->
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
- 
-      <label>
-        Name
-        <input type="text" name="name" required placeholder="Your name">
-      </label>
-      <label>
-        Phone
-        <input type="tel" name="phone" required placeholder="Your phone number">
-      </label>
-      <label>
-        Equipment needed
-        <select name="equipment" required>
-          <option value="" disabled selected>Select equipment</option>
-          <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
-          <option value="Mobile Crane">Mobile Crane</option>
-          <option value="Backhoe">Backhoe</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-      </label>
-      <label>
-        Site location
-        <input type="text" name="location" required placeholder="Area / address in Ahmedabad">
-      </label>
-      <label>
-        Rental duration
-        <input type="text" name="duration" placeholder="e.g. 3 days, 2 weeks">
-      </label>
-      <label class="full-width">
-        Project details
-        <textarea name="details" rows="4" placeholder="Anything else we should know"></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary full-width">Send Request</button>
-    </form>
+<!--
+  FORM NOTE:
+  This form now submits directly to Formspree (https://formspree.io/f/xkodnlzp),
+  so entries land in your inbox without opening the visitor's email app.
+  No JavaScript is required for this to work — it's a plain HTML POST.
+-->
+<form
+  class="quote-form"
+  id="quoteForm"
+  action="https://formspree.io/f/xkodnlzp"
+  method="POST"
+>
+  <!-- Sets the subject line of the email Formspree sends you -->
+  <input type="hidden" name="_subject" value="New equipment quote request — Narodiya Projects">
+
+  <!-- Redirects the visitor to a thank-you page after submitting.
+       Create thank-you.html (see note below) or point this at any page you like. -->
+  <input type="hidden" name="_next" value="thank-you.html">
+
+  <!-- Honeypot field to cut down on spam bots. Keep this hidden via CSS (see style.css note below). -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+  <label>
+    Name
+    <input type="text" name="name" required placeholder="Your name">
+  </label>
+  <label>
+    Phone
+    <input type="tel" name="phone" required placeholder="Your phone number">
+  </label>
+  <label>
+    Equipment needed
+    <select name="equipment" required>
+      <option value="" disabled selected>Select equipment</option>
+      <option value="JCB Backhoe Loader">JCB Backhoe Loader</option>
+      <option value="Mobile Crane">Mobile Crane</option>
+      <option value="Backhoe">Backhoe</option>
+      <option value="Not sure yet">Not sure yet</option>
+    </select>
+  </label>
+  <label>
+    Site location
+    <input type="text" name="location" required placeholder="Area / address in Ahmedabad">
+  </label>
+  <label>
+    Rental duration
+    <input type="text" name="duration" placeholder="e.g. 3 days, 2 weeks">
+  </label>
+  <label class="full-width">
+    Project details
+    <textarea name="details" rows="4" placeholder="Anything else we should know"></textarea>
+  </label>
+  <button type="submit" class="btn btn-primary full-width">Send Request</button>
+</form>
   </div>
 </section>
  
