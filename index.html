@@ -209,13 +209,32 @@
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
   <label>
-    Name
-    <input type="text" name="name" required placeholder="Your name">
-  </label>
-  <label>
-    Phone
-    <input type="tel" name="phone" required placeholder="Your phone number">
-  </label>
+  Full Name
+  <input
+    type="text"
+    name="name"
+    required
+    placeholder="John Smith"
+    minlength="3"
+    maxlength="60"
+    pattern="^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+    title="Enter your first and last name using letters only."
+  >
+</label>
+ <label>
+  Contact Number
+  <input
+    type="tel"
+    name="phone"
+    required
+    placeholder="9876543210"
+    inputmode="numeric"
+    maxlength="10"
+    pattern="[0-9]{10}"
+    oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"
+    title="Enter exactly 10 digits."
+  >
+</label>
   <label>
     Equipment needed
     <select name="equipment" required>
