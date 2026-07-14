@@ -188,13 +188,26 @@
 
     <!--
       FORM NOTE:
-      This form currently opens the visitor's email app with the details
-      pre-filled (via mailto), so it works with zero backend setup.
-      When you're ready for submissions to land directly in your inbox
-      without opening an email app, swap this for a service like Formspree
-      or FormSubmit — I can wire that up when you're ready.
+      This form now submits directly to Formspree (https://formspree.io/f/xkodnlzp),
+      so entries land in your inbox without opening the visitor's email app.
+      No JavaScript is required for this to work — it's a plain HTML POST.
     -->
-    <form class="quote-form" id="quoteForm">
+    <form
+      class="quote-form"
+      id="quoteForm"
+      action="https://formspree.io/f/xkodnlzp"
+      method="POST"
+    >
+      <!-- Sets the subject line of the email Formspree sends you -->
+      <input type="hidden" name="_subject" value="New equipment quote request — Narodiya Projects">
+ 
+      <!-- Redirects the visitor to a thank-you page after submitting.
+           Create thank-you.html (see note below) or point this at any page you like. -->
+      <input type="hidden" name="_next" value="thank-you.html">
+ 
+      <!-- Honeypot field to cut down on spam bots. Keep this hidden via CSS (see style.css note below). -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+ 
       <label>
         Name
         <input type="text" name="name" required placeholder="Your name">
@@ -229,8 +242,9 @@
     </form>
   </div>
 </section>
-
+ 
 <div class="hazard-bar" aria-hidden="true"></div>
+
 
 <!-- ============ FOOTER / CONTACT ============ -->
 <footer class="site-footer" id="contact">
