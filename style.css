@@ -143,8 +143,8 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -153,7 +153,7 @@ h1, h2, h3 {
 }
 
 .logo-img {
-  height: 34px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -211,14 +211,26 @@ h1, h2, h3 {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--black);
+  background:
+    radial-gradient(ellipse 900px 500px at 15% 0%, rgba(255, 102, 0, 0.16), transparent 60%),
+    linear-gradient(135deg, var(--black) 0%, var(--charcoal) 55%, var(--black) 100%);
   color: var(--cream-light);
   position: relative;
   padding: 90px 0 60px;
   overflow: hidden;
 }
 
-.hero-inner { max-width: 700px; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 80px);
+  pointer-events: none;
+}
+
+.hero-inner { max-width: 700px; position: relative; z-index: 1; }
 
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 4rem);
@@ -250,6 +262,8 @@ h1, h2, h3 {
   border-top: 1px solid var(--steel);
   margin: 60px 24px 0;
   padding: 16px 0 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* ---------- Equipment ---------- */
