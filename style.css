@@ -220,16 +220,6 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 80px);
-  pointer-events: none;
-}
-
 .hero-inner { max-width: 700px; position: relative; z-index: 1; }
 
 .hero h1 {
